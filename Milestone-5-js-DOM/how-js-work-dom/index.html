@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .title{
+            border: 1px solid red;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 15px;
+        } */
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="header-title">Welcome to my blogs</h1>
+    </header>
+    <header>
+        <ul id="blog-list">
+            <li>Blogs-1</li>
+            <li>Blogs-2</li>
+            <li>Blogs-3</li>
+            <li>Blogs-4</li>
+            <li>Blogs-5</li>
+        </ul>
+    </header>
+    <main id="blog">
+        <section class="title">
+            <h1>My blog-1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi iste, maxime natus repellendus fugiat exercitationem delectus, quasi doloremque fuga veniam laudantium? Laudantium rem, beatae velit eveniet sint earum iusto alias a assumenda voluptatibus. Animi at ea consequatur quis dolores fugiat accusamus asperiores corrupti eaque inventore, impedit odio sapiente aperiam expedita!</p>
+            
+        </section>
+        <section class="title">
+            <h1>My blog-2</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi iste, maxime natus repellendus fugiat exercitationem delectus, quasi doloremque fuga veniam laudantium? Laudantium rem, beatae velit eveniet sint earum iusto alias a assumenda voluptatibus. Animi at ea consequatur quis dolores fugiat accusamus asperiores corrupti eaque inventore, impedit odio sapiente aperiam expedita!</p>
+
+        </section>
+        <section class="title">
+            <h1 id="title-3">My blog-3</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi iste, maxime natus repellendus fugiat exercitationem delectus, quasi doloremque fuga veniam laudantium? Laudantium rem, beatae velit eveniet sint earum iusto alias a assumenda voluptatibus. Animi at ea consequatur quis dolores fugiat accusamus asperiores corrupti eaque inventore, impedit odio sapiente aperiam expedita!</p>
+
+        </section>
+        <section class="title">
+            <h1>My blog-4</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi iste, maxime natus repellendus fugiat exercitationem delectus, quasi doloremque fuga veniam laudantium? Laudantium rem, beatae velit eveniet sint earum iusto alias a assumenda voluptatibus. Animi at ea consequatur quis dolores fugiat accusamus asperiores corrupti eaque inventore, impedit odio sapiente aperiam expedita!</p>
+
+        </section>
+    </main>
+    <script>
+        //explore by getElementById
+        // const blogs= document.getElementsByTagName("p");
+        // for(const p of blogs){
+        //     console.log(p.innerText);
+        // }
+        // const thirdTitle= document.getElementById('title-3');
+        // thirdTitle.style.color='red';
+        // thirdTitle.style.textAlign='center';
+        // thirdTitle.style.backgroundColor='green';
+        // thirdTitle.innerHTML='update blog site';
+        // thirdTitle.style.padding='50px';
+        // thirdTitle.style.marginLeft='80px';
+        //explore getElementsByClassName
+       
+        const li=document.createElement('li');
+        li.innerText='Blogs-6';
+        const ul=document.getElementById('blog-list');
+        ul.appendChild(li);
+//add element
+        const section = document.createElement('section');
+        section.classList.add('title')
+        const h1=document.createElement('h1');
+        h1.innerText='My Blogs-5';
+        const p=document.createElement('p');
+        p.innerText='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi iste, maxime natus repellendus fugiat exercitationem delectus, quasi doloremque fuga veniam laudantium? Laudantium rem, beatae velit eveniet sint earum iusto alias a assumenda voluptatibus. Animi at ea consequatur quis dolores fugiat accusamus asperiores corrupti eaque inventore, impedit odio sapiente aperiam expedita!';
+        
+        section.appendChild(h1);
+        section.appendChild(p);
+        const blogSection=document.getElementById('blog');
+        blogSection.appendChild(section);
+
+       const blogs=document.getElementsByClassName('title');
+       for(const blog of blogs){
+        blog.style.border='2px solid red';
+        blog.style.margin='10px';
+        blog.style.padding='8px';
+        blog.style.borderRadius='15px';
+       }
+        const styleHeader= document.getElementById('header-title');
+        styleHeader.style.textAlign='center';
+        styleHeader.style.backgroundColor='green';
+        styleHeader.style.margin='15px';
+        styleHeader.style.padding='10px';
+    </script>
+</body>
+</html>

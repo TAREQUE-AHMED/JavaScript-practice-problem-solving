@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello bubble</h1>
+    <section id="section-list"> 
+        <h4>Bubble list</h4>
+        <ul id="ul-list">
+            <li class="li-list">Lorem, ipsum.</li>
+            <li id="second-list" class="li-list">Beatae, necessitatibus?</li>
+            <li class="li-list">Animi, repudiandae.</li>
+            <li class="li-list">Hic, ratione!</li>
+        </ul>
+    </section>
+    <script>
+        document.getElementById('second-list').addEventListener('click', function(event){
+            console.log('second-list-clicked');
+            event.stopPropagation();
+        })
+        document.getElementById('ul-list').addEventListener('click', function(event){
+            console.log('ul clicked');
+            event.stopPropagation();
+        })
+        document.getElementById('section-list').addEventListener('click', function(event){
+            console.log('section clicked');
+            event.stopPropagation();
+        })
+    </script>
+</body>
+</html>
